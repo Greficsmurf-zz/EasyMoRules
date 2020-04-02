@@ -5,6 +5,7 @@
 
 - [Условия (Conditions)](#условия)
 - [Действия (Actions)](#действия)
+- [Дополнительно (Actions)](#дополнительно)
 - [Синтаксис](#синтаксис)
 
 ## Условия
@@ -70,6 +71,9 @@
 
 ## Действия
 
+- [setField](#setfield)
+- [notifyChannel](#notifychannel_action)
+
 ### setField
 #### `type` customers, orders, delivery
 Меняет поле в информации о клиенте, заказе или доставке
@@ -99,7 +103,7 @@
     - add (Добавить)
     - delete (Удалить)
     
-### notifyChannel
+### notifyChannel_action
 #### `type` sendMessage
 Отправляет сообщение клиенту
 ```javascript
@@ -144,8 +148,8 @@ actions: [
 ```
 
 ### waitAnswer
-К каждому действию можно добавить объект( обернутое в { } ) `waitAnswer`, например:
-waitAnswer выполняет действие после того как получил сообщение от клиента
+К каждому действию можно добавить объект( обернутое в { } ) `waitAnswer`
+> waitAnswer выполняет действие после того как получил сообщение от клиента
 ```javascript
 actions: [
         {
